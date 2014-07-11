@@ -3,45 +3,42 @@
 angular.module('portfolio')
   .controller('MainCtrl', function ($scope, $timeout) {
 
-    $timeout(function(){
       $scope.awesomeThings = [
         {
           'title': 'Hamlin',
           'logo': 'beach.jpg'
         },
         {
-          'title': '',
+          'title': 'Barn',
           'logo': 'barn.jpg'
         },
         {
-          'title': '',
+          'title': 'Beer',
           'logo': 'beer.jpg'
         },
         {
-          'title': '',
+          'title': 'Bike',
           'logo': 'bike.jpg'
         },
         {
-          'title': '',
+          'title': 'Cats',
           'logo': 'cats.jpg'
         },
         {
-          'title': '',
+          'title': 'Me',
           'logo': 'me.jpg'
         },
         {
-          'title': '',
+          'title': 'Canadian Bridge',
           'logo': 'cnbridge.jpg'
         },
         {
-          'title': '',
+          'title': 'Viet Salad',
           'logo': 'viet.jpg'
         }
       ];
 
       $scope.title = 'Web and Mobile';
-
-    });
 
     angular.forEach($scope.awesomeThings, function (awesomeThing) {
       awesomeThing.rank = Math.random();

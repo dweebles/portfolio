@@ -37,11 +37,10 @@
 			</section>
 		</nav>
 		
-		<div ng-view></div>
+		<div class="view-animate" ng-view></div>
 
 		<div class="row">
-			<div class="large-12 columns">
-				<hr>
+			<div class="large-12 columns footer">
 				<p>With much ♥ from <a href="https://github.com/dweebles">@dweebles</a></p>
 			</div>
 		</div>
@@ -66,14 +65,13 @@
 		<script src="bower_components/jquery.cookie/jquery.cookie.js"></script>
 		<script src="bower_components/jquery-placeholder/jquery.placeholder.js"></script>
 		<script src="bower_components/foundation/js/foundation.js"></script>
-		<script src="bower_components/gsap/src/uncompressed/TweenMax.js"></script>
-		<script src="bower_components/ng-Fx/dist/ng-Fx.js"></script>
 		<!-- endbower -->
 		<!-- endbuild -->
 
 		<!-- build:js({app,.tmp}) scripts/main.js -->
 		<script src="scripts/portfolio.js"></script>
 		<script src="scripts/main/main-ctrl.js"></script>
+		<script src="scripts/resume/resume-ctrl.js"></script>
 		<!-- inject:partials -->
 		<!-- endinject -->
 		<!-- endbuild -->
