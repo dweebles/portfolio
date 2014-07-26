@@ -1,4 +1,11 @@
 @import '../bower_components/foundation/scss/foundation';
+@import '../bower_components/foundation/scss/foundation/components/_top-bar';
+	
+
+@font-face {
+	font-family: "webserveroff";
+	src: url('../fonts/web-serveroff/Web_Serveroff.otf') format('opentype');
+}
 
 // import font
 @import url(http://fonts.googleapis.com/css?family=Arvo:400,700);
@@ -37,6 +44,14 @@
 //resume styles
 .resume-header{
 	background-color: #629ABC;
+}
+
+.resume-header, .main-header{
+	font-family: "webserveroff";
+	h4,h1{
+		font-size: 64px;
+		font-family: "webserveroff";
+	}
 }
 
 // Animations
