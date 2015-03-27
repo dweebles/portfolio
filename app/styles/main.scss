@@ -78,3 +78,12 @@
 .view-animate.ng-leave.ng-leave-active {
   left:-100%;
 }
+
+/* Contacts page styles */
+.contact {
+  ul {
+    li {
+      display: inline;
+    }
+  }
+}

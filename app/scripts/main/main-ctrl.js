@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('portfolio')
-  .controller('MainCtrl', function ($scope, $timeout) {
+  .controller('MainCtrl', function ($scope) {
 
       $scope.awesomeThings = [
         {

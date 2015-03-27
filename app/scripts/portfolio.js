@@ -11,6 +11,10 @@ angular.module('portfolio', ['ngAnimate', 'ngRoute'])
       	templateUrl: 'partials/resume.html',
       	controller: 'ResumeCtrl'
       })
+      .when('/contact', {
+        templateUrl: 'partials/contact.html',
+        controller: 'ContactCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
