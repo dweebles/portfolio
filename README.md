@@ -1,4 +1,4 @@
 portfolio
 =========
 
-2014 portfolio using yeoman, angularjs, and gulp
+2018 portfolio site built with mostly vue, axios, and little bit of threejs
