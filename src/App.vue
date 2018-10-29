@@ -2,19 +2,19 @@
   <div id="app">
     <Menu />
     <div id="container"></div>
-    <HelloWorld msg="Hello there..."/>
+    <About msg="Hello there..."/>
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import About from "./components/About.vue";
 import Menu from "./components/menu.vue";
 import * as Three from "three";
 
 export default {
   name: "app",
   components: {
-    HelloWorld,
+    About,
     Menu
   },
   camera: null,
@@ -66,7 +66,7 @@ export default {
   x: 0;
   y: 0;
   width: 100%;
-  height: 100%;
+  height: 70%;
   z-index: 0;
 }
 body {
