@@ -1,15 +1,9 @@
 <template>
-  <nav class="navbar navbar-expand-md">
-    <a class="navbar-brand" href="#">Duy</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-    <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
-      <ul class="navbar-nav ml-auto">
-        <li v-for="link in menuItems" v-bind:key="link">
-          <a v-bind:href="link.url" class="nav-link underlined underlined--thick">{{link.name}}</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
+  <b-nav card-header tabs>
+    <!-- <b-nav-item>'s with child routes. Note the trailing slash on the first <b-nav-item> -->
+    <b-nav-item to="/some/route/" exact exact-active-class="active">Projects</b-nav-item>
+    <b-nav-item to="/some/route/foo" exact exact-active-class="active">Contact</b-nav-item>
+  </b-nav>
 </template>
 
 <script>

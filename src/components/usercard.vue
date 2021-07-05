@@ -6,21 +6,17 @@
 		    </div>
 		    <h4 class="card-title">Duy Nguyen</h4>
 			<b-card-text>
-				Programmer, Cat Dad, Horror movie enthusiast, nerd living in St Pete FL
+				Programmer, Cat dad, Horror movie enthusiast, Nerd living in St Pete FL
 			</b-card-text>
 	    </b-card>
 	</div>
 </template>
 
 <script>
-import { BCard, BCardText } from 'bootstrap-vue';
 
 export default {
 	name: "usercard",
-	components: {
-		BCard,
-		BCardText
-	},
+	components: {},
 	camera: null,
 	scene: null,
 	renderer: null,
@@ -32,14 +28,15 @@ export default {
 
 <style>
 	#usercard {
+		font-family: 'Barlow Condensed', sans-serif;
 		width: 650px;
 		min-height: 450px;
-		margin: 100px auto 0px auto;
+		margin: 5px auto 0px auto;
 	}
 	.img-wrapper {
 		position: relative;
 	}
-	img {
+	.img-wrapper img {
 		width: 130px;
 		height: 130px;
 		border-radius: 50%;
@@ -48,6 +45,10 @@ export default {
 		position: absolute;
 		top: -50px;
 		left: 39%;
+	}
+	.card {
+		/*border: 1px solid #999;*/
+		/*box-shadow: 0px 0px 20px #999;*/
 	}
 	h4.card-title {
 		margin: 100px auto 0px auto;

@@ -1,6 +1,13 @@
 <template>
 	<div id="app">
-		<!-- <Menu /> -->
+		<b-nav card-header>
+			<a class="navbar-brand mr-auto p-2" href="#">
+    			<img src="./assets/keyboard.png" width="30" height="30" alt="">
+  			</a>
+		    <b-nav-item class="p-2" to="/some/route/" exact exact-active-class="active">Projects</b-nav-item>
+		    <b-nav-item class="p-2" to="/some/route/foo" exact exact-active-class="active">Contact</b-nav-item>
+		</b-nav>
+		<router-view></router-view>
 		<UserCard />
 	</div>
 </template>
@@ -13,8 +20,6 @@ import UserCard from "./components/usercard.vue";
 export default {
 	name: "app",
 	components: {
-		About,
-		Menu,
 		UserCard
 	},
 	camera: null,
@@ -27,11 +32,14 @@ export default {
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500&display=swap');
 #app {
 	font-family: "Avenir", Helvetica, Arial, sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	color: #2c3e50;
+	width: 650px;
+	margin: 100px auto 0px auto;
 }
 body {
 	background-color: #8BC6EC;
@@ -39,5 +47,11 @@ body {
 }
 html {
 	height: 100%;
+}
+.nav {
+	font-family: 'Barlow Condensed', sans-serif;
+}
+.nav-item a {
+	color: #000;
 }
 </style>
