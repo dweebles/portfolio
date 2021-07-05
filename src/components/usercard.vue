@@ -2,7 +2,7 @@
 	<div id="usercard">
 		<b-card>
 		    <div class="img-wrapper">
-		    	<img src="../assets/duy.jpg">
+		    	<img src="../assets/duy.jpg" class="animated bounce">
 		    </div>
 		    <h4 class="card-title">Duy Nguyen</h4>
 			<b-card-text>
@@ -10,10 +10,14 @@
 			</b-card-text>
 			 <b-card-body>
 			 	<transition name="slide"
-			 				enter-active-class="animated zoomIn"
-			 				leave-class="animated zoomOut">
+			 				enter-active-class="animated fadeIn"
+			 				leave-class="animated fadeOut">
 					<router-view></router-view>
 				</transition>
+				<ul class="list-inline">
+					<li><a href=""><img src="../assets/linkedin.png" width="20" height="20" /></a></li>
+					<li><a href=""><img src="../assets/instagram.png" width="20" height="20" /></a></li>
+				</ul>
 			</b-card-body>
 	    </b-card>
 	</div>
@@ -55,7 +59,7 @@ export default {
 	}
 	.card {
 		/*border: 1px solid #999;*/
-		/*box-shadow: 0px 0px 20px #999;*/
+		box-shadow: 0px 0px 20px #999;
 	}
 	h4.card-title {
 		margin: 100px auto 0px auto;
@@ -70,13 +74,14 @@ export default {
 		margin: 20px auto 0px auto;
 		text-align: center;
 	}
-	/*.slide-fade-enter-active {
-		transition: all .2s ease;
+	.list-inline {
+		text-align: center;
+		position: absolute;
+		bottom: 0px;
+		left: 280px;
 	}
-	.slide-fade-leave-active {
-		transition: all .3s ease;
+	.list-inline li {
+		display: inline;
+		padding: .5rem;
 	}
-	.slide-fade-enter, .slide-fade-leave-to {
-		opacity: 0;
-	}*/
 </style>

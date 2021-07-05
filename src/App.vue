@@ -38,7 +38,7 @@ export default {
 	-moz-osx-font-smoothing: grayscale;
 	color: #2c3e50;
 	width: 650px;
-	margin: 100px auto 0px auto;
+	margin: 34px auto 0px auto;
 }
 body {
 	background-color: #8BC6EC;
@@ -49,8 +49,13 @@ html {
 }
 .nav {
 	font-family: 'Barlow Condensed', sans-serif;
+	position: relative;
+	top: 64px;
+	z-index: 1;
+	padding-left: 1rem;
 }
 .nav-item a {
-	color: #000;
+	color: #333;
+	font-weight: 500;
 }
 </style>

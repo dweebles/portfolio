@@ -1,6 +1,19 @@
 <template>
   <div class="work">
-    <p>Image grid goes here</p>
+    <b-row class="imagetiles">
+      <b-col sm="12" md="6" lg="3">
+        <b-img src="https://picsum.photos/100/100/?image=41" fluid alt="Responsive image"></b-img>
+      </b-col>
+      <b-col sm="12" md="6" lg="3">
+        <b-img src="https://picsum.photos/100/100/?image=41" fluid alt="Responsive image"></b-img>
+      </b-col>
+      <b-col sm="12" md="6" lg="3">
+        <b-img src="https://picsum.photos/100/100/?image=41" fluid alt="Responsive image"></b-img>
+      </b-col>
+      <b-col sm="12" md="6" lg="3">
+        <b-img src="https://picsum.photos/100/100/?image=41" fluid alt="Responsive image"></b-img>
+      </b-col>
+    </b-row>
   </div>
 </template>
 
