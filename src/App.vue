@@ -4,16 +4,15 @@
 			<a class="navbar-brand mr-auto p-2" href="#">
     			<img src="./assets/keyboard.png" width="30" height="30" alt="">
   			</a>
-		    <b-nav-item class="p-2" to="/some/route/" exact exact-active-class="active">Projects</b-nav-item>
-		    <b-nav-item class="p-2" to="/some/route/foo" exact exact-active-class="active">Contact</b-nav-item>
+		    <b-nav-item class="p-2" to="/work" exact exact-active-class="active">Projects</b-nav-item>
+		    <b-nav-item class="p-2" to="/contact" exact exact-active-class="active">Contact</b-nav-item>
 		</b-nav>
-		<router-view></router-view>
 		<UserCard />
 	</div>
 </template>
 
 <script>
-import About from "./components/About.vue";
+import About from "./components/Contact.vue";
 import Menu from "./components/menu.vue";
 import UserCard from "./components/usercard.vue";
 
