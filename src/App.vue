@@ -24,8 +24,8 @@
 </template>
 
 <script>
-import About from "./components/Contact.vue";
-import Menu from "./components/menu.vue";
+// import About from "./components/Contact.vue";
+// import Menu from "./components/menu.vue";
 import UserCard from "./components/usercard.vue";
 
 export default {
