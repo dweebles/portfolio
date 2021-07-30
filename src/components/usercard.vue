@@ -4,7 +4,7 @@
       <div class="img-wrapper">
         <img src="../assets/duy.png" class="animated bounce" />
       </div>
-      <h4 class="card-title">About Me</h4>
+      <h4 class="card-title"></h4>
       <b-card-text> Programmer, Cat dad, living in St Pete FL </b-card-text>
       <b-card-body>
         <transition

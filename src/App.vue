@@ -2,7 +2,10 @@
   <div id="app">
     <b-nav card-header>
       <a class="navbar-brand mr-auto p-2" href="#">
-        < DuyNguyen />&nbsp;<span class="cursor">&nbsp;</span></a
+        <span class="html-bracket"><</span>DuyNguyen
+        <span class="html-bracket">/></span>&nbsp;<span class="cursor"
+          >&nbsp;</span
+        ></a
       >
       <b-nav-item
         class="p-2 nav-links"
@@ -44,6 +47,7 @@ export default {
 
 <style>
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500&display=swap");
+
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -75,6 +79,10 @@ html {
 .nav-item a {
   color: #ae81ff;
   font-weight: 500;
+}
+
+.html-bracket {
+  color: #f8f8f2;
 }
 
 .cursor {
