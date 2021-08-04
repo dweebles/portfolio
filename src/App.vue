@@ -2,8 +2,8 @@
   <div id="app">
     <b-nav card-header>
       <a class="navbar-brand mr-auto p-2" href="#">
-        <span class="html-bracket"><</span>DuyNguyen
-        <span class="html-bracket">/></span>&nbsp;<span class="cursor"
+        <span class="html-bracket">&#60;</span>DuyNguyen
+        <span class="html-bracket">/&#62;</span>&nbsp;<span class="cursor"
           >&nbsp;</span
         ></a
       >
@@ -27,22 +27,14 @@
 </template>
 
 <script>
-// import About from "./components/Contact.vue";
-// import Menu from "./components/menu.vue";
-import UserCard from "./components/usercard.vue";
+import UserCard from "./components/Usercard";
 
 export default {
-  name: "app",
+  name: 'App',
   components: {
-    UserCard,
-  },
-  camera: null,
-  scene: null,
-  renderer: null,
-  mesh: null,
-  methods: {},
-  mounted() {},
-};
+    UserCard
+  }
+}
 </script>
 
 <style>
