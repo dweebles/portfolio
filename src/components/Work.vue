@@ -20,12 +20,6 @@
         <Linechart />
       </b-col>
     </b-row>
-    <b-row>
-      <b-col sm="12" md="12" lg="12">
-        <Bar :chart-data="repoCommitCounts" />
-        <Linechart />
-      </b-col>
-    </b-row>
   </div>
 </template>
 
