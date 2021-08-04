@@ -49,8 +49,9 @@ export default {
   margin: 34px auto 0px auto;
 }
 body {
-  background-color: #8bc6ec;
-  background-image: linear-gradient(135deg, #8bc6ec 0%, #9599e2 100%);
+  /* background-color: #8bc6ec; */
+  background-color: #310e68;
+  background-image: linear-gradient(316deg, #310e68 0%, #5f0f40 74%);
 }
 html {
   height: 100%;
@@ -89,7 +90,7 @@ html {
   -webkit-box-sizing: border-box;
   border-left: 0.1em solid;
 
-  -webkit-animation: typing 2s steps(8, end) infinite,
+  -webkit-animation: typing 2s steps(8, end),
     blinking 1s step-end infinite;
   animation: typing 2s steps(10, end) infinite, blinking 1s step-end infinite;
 }

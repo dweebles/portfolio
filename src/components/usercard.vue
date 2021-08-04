@@ -5,7 +5,7 @@
         <img src="../assets/duy.png" class="animated bounce" />
       </div>
       <h4 class="card-title"></h4>
-      <b-card-text> Programmer, Cat dad, living in St Pete FL </b-card-text>
+      <b-card-text> <b>Programmer &amp; Cat Dad </b> </b-card-text>
       <b-card-body>
         <transition
           name="slide"
@@ -62,7 +62,7 @@ export default {
 }
 .card {
   /*border: 1px solid #999;*/
-  box-shadow: 0px 0px 20px #999;
+  box-shadow: 0px 0px 40px #111;
   background: #272822;
 }
 h4.card-title {

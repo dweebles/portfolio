@@ -1,12 +1,29 @@
 <template>
   <div class="work">
-    <b-row class="imagetiles">
+    <b-row>
+      <b-col sm="12" md="4" class="text-left">
+        <b>Languages:</b>
+        <p>
+          <span v-for="language in languages" :key="language">
+            {{ language }}, 
+          </span>
+        </p>
+        <b>Latest projects:</b>
+        <p>
+          <span v-for="repo in repos" :key="repo.name">
+            {{ repo.name }}, 
+          </span>
+        </p>
+      </b-col>
+      <b-col sm="12" md="8">
+        <Bar :chart-data="repoCommitCounts" />
+        <Linechart />
+      </b-col>
+    </b-row>
+    <b-row>
       <b-col sm="12" md="12" lg="12">
-        <D3BarChart
-          :config="chart_config"
-          :datum="chart_data"
-          title="Github Repos"
-        ></D3BarChart>
+        <Bar :chart-data="repoCommitCounts" />
+        <Linechart />
       </b-col>
     </b-row>
   </div>
@@ -14,67 +31,20 @@
 
 <script>
 import axios from "axios";
-import { D3BarChart } from "vue-d3-charts";
+// import { Bar } from 'vue-chartjs'
+import Linechart from './BarChart.vue'
 
 export default {
   name: "Work",
   components: {
-    D3BarChart,
+    Linechart
   },
   data() {
     return {
       repos: [],
       languages: [],
       commits: [],
-      repoCommitCounts: [],
-      chart_data: [
-        {
-          name: "Lorem",
-          total: 30,
-        },
-        {
-          name: "Ipsum",
-          total: 21,
-        },
-        {
-          name: "Dolor",
-          total: 20,
-        },
-      ],
-      chart_config: {
-        key: false,
-        values: false,
-        axis: {
-          yTitle: false,
-          xTitle: "false",
-          yFormat: ".0f",
-          xFormat: ".0f",
-          yTicks: 10,
-          xTicks: 10,
-        },
-        color: {
-          key: false,
-          keys: false,
-          scheme: false,
-          current: "#1f77b4",
-          default: "#AAA",
-          axis: "#000",
-        },
-        currentKey: false,
-        labelRotation: 0,
-        margin: {
-          top: 20,
-          right: 20,
-          bottom: 20,
-          left: 20,
-        },
-        orientation: "vertical",
-        tooltip: { label: false },
-        transition: {
-          duration: 350,
-          ease: "easeLinear",
-        },
-      },
+      repoCommitCounts: []
     };
   },
   methods: {},
@@ -120,6 +90,8 @@ export default {
         this.repoCommitCounts = repoArr;
       });
 
+      this.renderChart(this.chartData, {});
+
     // await this.renderRepoChart(this.repoCommitCounts);
   },
 };
@@ -129,10 +101,13 @@ export default {
 .work {
   text-align: center;
 }
-.repo-charts {
-  /* rotate: -90deg; */
-  /* width: 100%; */
-  /* height: 100%; */
+
+.work b {
+  color: #F8F8F2;
+}
+
+.work span {
+  color: #A6E22E;
 }
 
 .repo-charts rect {
