@@ -68,7 +68,18 @@ html {
   font-family: "Barlow Condensed", sans-serif;
   font-weight: 600;
   color: #f92672;
+  -webkit-transition: text-shadow .8s ease-out;
+  -moz-transition: text-shadow .8s ease-out;
+  -o-transition: text-shadow .8s ease-out;
+  transition: text-shadow .8s ease-out;
+
 }
+
+.navbar-brand:hover {
+  color: #f92672;
+  text-shadow: 0px 0px 10px #000;
+}
+
 .nav-item a {
   color: #ae81ff;
   font-weight: 500;
@@ -76,6 +87,11 @@ html {
 
 .html-bracket {
   color: #f8f8f2;
+}
+
+a.router-link-active {
+  color: #a6e22e;
+  background-color: #856B86;
 }
 
 .cursor {

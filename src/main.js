@@ -10,6 +10,7 @@ import Work from "./components/Work.vue";
 import Contact from "./components/Contact.vue";
 
 const routes = [
+  { path: '/', component: Work},
   { path: '/work', component: Work },
   { path: '/contact', component: Contact }
 ];

@@ -4,16 +4,21 @@
       <b-col sm="12" md="4" class="text-left">
         <b>Languages:</b>
         <p>
-          <span v-for="language in languages" :key="language">
-            {{ language }},
+          <span v-for="(language, i) in languages" :key="language">
+            {{ language }}
+            <span v-if="i != Object.keys(languages).length - 1">, </span>
           </span>
         </p>
         <b>Latest projects:</b>
         <p>
-          <span v-for="repo in repos" :key="repo.name"> {{ repo.name }}, </span>
+          <span v-for="(repo, index) in repos" :key="repo.name">
+            {{ repo.name }}
+            <span v-if="index != Object.keys(repos).length - 1">, </span>
+          </span>
         </p>
       </b-col>
       <b-col sm="12" md="8">
+        <b>Coffee Consumption and Hours Coding</b>
         <D3LineChart :config="chart_config" :datum="chart_data"></D3LineChart>
       </b-col>
     </b-row>
@@ -36,33 +41,38 @@ export default {
       commits: [],
       repoCommitCounts: [],
       chart_data: [
-        { hours: 238, production: 134, date: 2000 },
-        { hours: 938, production: 478, date: 2001 },
-        { hours: 1832, production: 1392, date: 2002 },
-        { hours: 2092, production: 2343, date: 2003 },
-        { hours: 2847, production: 2346, date: 2004 },
-        { hours: 2576, production: 2233, date: 2005 },
-        { hours: 2524, production: 2325, date: 2006 },
-        { hours: 1648, production: 2456, date: 2007 },
-        { hours: 2479, production: 2329, date: 2008 },
-        { hours: 3200, production: 2438, date: 2009 },
+        { hoursCoding: 805, coffeeConsumption: 184, date: 2010 },
+        { hoursCoding: 612, coffeeConsumption: 215, date: 2011 },
+        { hoursCoding: 1300, coffeeConsumption: 203, date: 2012 },
+        { hoursCoding: 2700, coffeeConsumption: 490, date: 2013 },
+        { hoursCoding: 2805, coffeeConsumption: 402, date: 2014 },
+        { hoursCoding: 2921, coffeeConsumption: 416, date: 2015 },
+        { hoursCoding: 2713, coffeeConsumption: 220, date: 2016 },
+        { hoursCoding: 2845, coffeeConsumption: 553, date: 2017 },
+        { hoursCoding: 2179, coffeeConsumption: 480, date: 2018 },
+        { hoursCoding: 3200, coffeeConsumption: 915, date: 2019 },
       ],
       chart_config: {
-        values: ["hours", "production"],
+        values: ["hoursCoding", "coffeeConsumption"],
         color: {
           scheme: "schemeSet2",
+          axis: "#a6e22e",
         },
+        curve: "curveLinear",
         date: {
           key: "date",
           inputFormat: "%Y",
           outputFormat: "%Y",
         },
         axis: {
-          yTicks: 3,
+          yTicks: 3
         },
         points: {
           visibleSize: 3,
           hoverSize: 6,
+        },
+        tooltip: {
+          labels: false,
         },
         margin: {
           top: 0,
@@ -105,20 +115,21 @@ export default {
             return count;
           });
 
+          const commitDate = this.commits.map((commit) => {
+            return commit.created_at;
+          });
+
           return {
             name: repo.name,
             total: commitCount.reduce(
               (accumulator, current) => accumulator + current
             ),
+            date: commitDate,
           };
         });
 
         this.repoCommitCounts = repoArr;
       });
-
-    this.renderChart(this.chartData, {});
-
-    // await this.renderRepoChart(this.repoCommitCounts);
   },
 };
 </script>
