@@ -56,6 +56,12 @@ body {
 html {
   height: 100%;
 }
+
+.chart__axis {
+  color: #f8f8f2 !important;
+  font-weight: 600;
+}
+
 .nav {
   font-family: "Barlow Condensed", sans-serif;
   position: relative;

@@ -14,18 +14,6 @@
         >
           <router-view></router-view>
         </transition>
-        <ul class="list-inline">
-          <li>
-            <a href=""
-              ><img src="../assets/linkedin.png" width="20" height="20"
-            /></a>
-          </li>
-          <li>
-            <a href=""
-              ><img src="../assets/instagram.png" width="20" height="20"
-            /></a>
-          </li>
-        </ul>
       </b-card-body>
     </b-card>
   </div>
@@ -79,15 +67,5 @@ h4.card-title {
   margin: 20px auto 0px auto;
   text-align: center;
   color: #e6db74;
-}
-.list-inline {
-  text-align: center;
-  position: absolute;
-  bottom: 0px;
-  left: 280px;
-}
-.list-inline li {
-  display: inline;
-  padding: 0.5rem;
 }
 </style>
