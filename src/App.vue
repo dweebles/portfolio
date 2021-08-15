@@ -27,7 +27,7 @@
 </template>
 
 <script>
-import UserCard from "./components/Usercard";
+import UserCard from "./components/usercard";
 
 export default {
   name: 'App',

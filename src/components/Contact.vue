@@ -9,10 +9,20 @@
       <b-col sm="12" md="8">
         <b-form @submit="onSubmit" @reset="onReset">
             <b-form-input
+              id="input-0"
+              v-model="form.name"
+              type="text"
+              placeholder="Enter name"
+              class="mt-2"
+              required
+            ></b-form-input>
+
+            <b-form-input
               id="input-1"
               v-model="form.email"
               type="email"
               placeholder="Enter email"
+              class="mt-2"
               required
             ></b-form-input>
 
@@ -22,9 +32,12 @@
               placeholder="Enter something..."
               rows="3"
               max-rows="6"
+              class="mt-2"
             ></b-form-textarea>
-          <b-button type="submit" variant="primary">Submit</b-button>
-          <b-button type="reset" variant="danger">Reset</b-button>
+            <div class="mt-2 float-right">
+              <b-button type="reset" variant="danger" class="mr-2">Reset</b-button>
+              <b-button type="submit" variant="primary">Submit</b-button>
+            </div>
         </b-form>
       </b-col>
     </b-row>
@@ -32,12 +45,15 @@
 </template>
 
 <script>
+import emailjs from 'emailjs-com';
+
 export default {
   name: "Contact",
   props: {},
   data() {
     return {
       form: {
+        name: "",
         email: "",
         stuff: "",
       },
@@ -47,25 +63,26 @@ export default {
   },
   methods: {
     onSubmit(event) {
-      validateEmail();
       event.preventDefault();
       console.log(JSON.stringify(this.form));
+
+      try {
+        emailjs.sendForm('service_m97ql1k', 'template_c4t6cbg', e.target,
+        'YOUR_USER_ID', {
+          name: this.form.name,
+          email: this.form.email,
+          message: this.form.message
+        })
+
+      } catch(error) {
+          console.log({error})
+      }
     },
     onReset(event) {
       event.preventDefault();
       // Reset our form values
       this.form.email = "";
       this.form.stuff = "";
-    },
-    validateEmail() {
-      let validEmailField = true;
-
-      if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(this.form.email)) {
-          this.errorMsg = 'Please enter a valid email address';
-          validEmailField = false;
-      }
-
-      (validEmailField) ? showErrMsg = false : showErrMsg = true;
     }
   },
 };
