@@ -41,12 +41,15 @@ export default {
         email: "",
         stuff: "",
       },
+      errorMsg: "",
+      showErrMsg: false
     };
   },
   methods: {
     onSubmit(event) {
+      validateEmail();
       event.preventDefault();
-      alert(JSON.stringify(this.form));
+      console.log(JSON.stringify(this.form));
     },
     onReset(event) {
       event.preventDefault();
@@ -54,6 +57,16 @@ export default {
       this.form.email = "";
       this.form.stuff = "";
     },
+    validateEmail() {
+      let validEmailField = true;
+
+      if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(this.form.email)) {
+          this.errorMsg = 'Please enter a valid email address';
+          validEmailField = false;
+      }
+
+      (validEmailField) ? showErrMsg = false : showErrMsg = true;
+    }
   },
 };
 </script>
