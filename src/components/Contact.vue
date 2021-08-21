@@ -67,7 +67,7 @@ export default {
       console.log(JSON.stringify(this.form));
 
       try {
-        emailjs.sendForm('service_m97ql1k', 'template_c4t6cbg', e.target,
+        emailjs.sendForm('service_m97ql1k', 'template_c4t6cbg', event.target,
         'YOUR_USER_ID', {
           name: this.form.name,
           email: this.form.email,
