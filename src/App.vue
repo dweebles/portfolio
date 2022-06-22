@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <b-nav card-header>
-      <a class="navbar-brand mr-auto p-2" href="#">
+      <a class="navbar-brand mr-auto p-2" href="/">
         <span class="html-bracket">&#60;</span>DuyNguyen
         <span class="html-bracket">/&#62;</span>&nbsp;<span class="cursor"
           >&nbsp;</span

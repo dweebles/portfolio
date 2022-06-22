@@ -2,7 +2,7 @@
   <div id="usercard">
     <b-card>
       <div class="img-wrapper">
-        <img src="../assets/duy.png" class="animated bounce" />
+        <img src="https://avatars.githubusercontent.com/u/1853843?v=4" class="animated bounce" />
       </div>
       <h4 class="card-title"></h4>
       <b-card-text> <b>Programmer &amp; Cat Dad </b> </b-card-text>

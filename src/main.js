@@ -8,9 +8,10 @@ import App from './App.vue'
 /* Components */
 import Work from "./components/Work.vue";
 import Contact from "./components/Contact.vue";
+import Home from "./components/Home.vue";
 
 const routes = [
-  { path: '/', component: Work},
+  { path: '/', component: Home},
   { path: '/work', component: Work },
   { path: '/contact', component: Contact }
 ];

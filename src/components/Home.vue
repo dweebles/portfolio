@@ -1,21 +1,9 @@
 <template>
   <div class="work">
     <b-row>
-      <b-col sm="12" class="text-center">
-        <b>Languages:</b>
-        <p>
-          <span v-for="(language, i) in languages" :key="language">
-            {{ language }}
-            <span v-if="i != Object.keys(languages).length - 1">, </span>
-          </span>
-        </p>
-        <b>Latest projects:</b>
-        <p>
-          <a :href="repo.html_url" v-for="(repo, index) in repos" :key="repo.name">
-            {{ repo.name }}
-            <span v-if="index != Object.keys(repos).length - 1">, </span>
-          </a>
-        </p>
+      <b-col sm="12">
+        <b>Coffee Consumption and Hours Coding</b>
+        <D3LineChart :config="chart_config" :datum="chart_data"></D3LineChart>
       </b-col>
     </b-row>
   </div>
@@ -26,7 +14,7 @@ import axios from "axios";
 import { D3LineChart } from "vue-d3-charts";
 
 export default {
-  name: "Work",
+  name: "Home",
   components: {
     D3LineChart,
   },
@@ -139,7 +127,7 @@ export default {
   color: #f8f8f2;
 }
 
-.work span, a {
+.work span {
   color: #a6e22e;
 }
 
