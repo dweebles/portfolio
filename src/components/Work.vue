@@ -23,60 +23,15 @@
 
 <script>
 import axios from "axios";
-import { D3LineChart } from "vue-d3-charts";
 
 export default {
   name: "Work",
-  components: {
-    D3LineChart,
-  },
   data() {
     return {
       repos: [],
       languages: [],
       commits: [],
-      repoCommitCounts: [],
-      chart_data: [
-        { hoursCoding: 805, coffeeConsumption: 184, date: 2010 },
-        { hoursCoding: 612, coffeeConsumption: 215, date: 2011 },
-        { hoursCoding: 1300, coffeeConsumption: 203, date: 2012 },
-        { hoursCoding: 2700, coffeeConsumption: 490, date: 2013 },
-        { hoursCoding: 2805, coffeeConsumption: 402, date: 2014 },
-        { hoursCoding: 2921, coffeeConsumption: 416, date: 2015 },
-        { hoursCoding: 2713, coffeeConsumption: 220, date: 2016 },
-        { hoursCoding: 2845, coffeeConsumption: 553, date: 2017 },
-        { hoursCoding: 2179, coffeeConsumption: 480, date: 2018 },
-        { hoursCoding: 3200, coffeeConsumption: 915, date: 2019 },
-      ],
-      chart_config: {
-        values: ["hoursCoding", "coffeeConsumption"],
-        color: {
-          scheme: "schemeSet2",
-          axis: "#a6e22e",
-        },
-        curve: "curveLinear",
-        date: {
-          key: "date",
-          inputFormat: "%Y",
-          outputFormat: "%Y",
-        },
-        axis: {
-          yTicks: 3
-        },
-        points: {
-          visibleSize: 3,
-          hoverSize: 6,
-        },
-        tooltip: {
-          labels: false,
-        },
-        margin: {
-          top: 0,
-          right: 0,
-          bottom: 130,
-          left: 0,
-        },
-      },
+      repoCommitCounts: []
     };
   },
   methods: {},

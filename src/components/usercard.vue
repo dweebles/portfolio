@@ -32,7 +32,7 @@ export default {
 #usercard {
   font-family: "Barlow Condensed", sans-serif;
   width: 650px;
-  min-height: 450px;
+  min-height: 500px;
   margin: 5px auto 0px auto;
 }
 .img-wrapper {
@@ -60,8 +60,8 @@ h4.card-title {
 }
 .card-body {
   margin-top: 20px;
-  min-height: 250px;
-  max-height: 450px;
+  min-height: 300px;
+  max-height: 500px;
 }
 .card-text {
   margin: 20px auto 0px auto;

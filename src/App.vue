@@ -23,6 +23,12 @@
       >
     </b-nav>
     <UserCard />
+    <b-row>
+      <b-col sm="12" class="text-center">
+        <a href="https://github.com/dweebles"><b-icon class="social-icons mr-2 mt-2" icon="github"></b-icon></a>
+        <a href="https://www.linkedin.com/in/duy-nguyen-software/"><b-icon class="social-icons ml-2 mt-2" icon="linkedin"></b-icon></a>
+      </b-col>
+    </b-row>
   </div>
 </template>
 
@@ -115,6 +121,14 @@ a.router-link-active {
   -webkit-animation: typing 2s steps(8, end),
     blinking 1s step-end infinite;
   animation: typing 2s steps(10, end) infinite, blinking 1s step-end infinite;
+}
+
+.social-icons {
+  position:  relative;
+  top: -35px;
+  width: 18px;
+  height: 18px;
+  color: #a6e22e;
 }
 
 @-webkit-keyframes typing {
