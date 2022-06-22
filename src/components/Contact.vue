@@ -1,12 +1,8 @@
 <template>
   <div class="hello">
-    <h5>Contact Me</h5>
     <b-row>
-      <b-col sm="12" md="4" class="text-left">
-        <p><a href="tel:+15855033719">(585) 503-3719</a></p>
-        <p>sleepynguyener@gmail.com</p>
-      </b-col>
-      <b-col sm="12" md="8">
+      <b-col sm="12" md="7">
+        <h5>Contact Me</h5>
         <b-form @submit="onSubmit" @reset="onReset">
             <b-form-input
               id="input-0"
@@ -34,11 +30,15 @@
               max-rows="6"
               class="mt-2"
             ></b-form-textarea>
-            <div class="mt-2 float-right">
+            <div class="mt-2 float-left">
               <b-button type="reset" variant="danger" class="mr-2">Reset</b-button>
               <b-button type="submit" variant="primary">Submit</b-button>
             </div>
         </b-form>
+      </b-col>
+      <b-col sm="12" md="5" class="mt-4 text-left">
+        <p><a href="tel:+15855033719">(585) 503-3719 <b-icon class="ml-1" icon="phone"></b-icon></a></p>
+        <p>sleepynguyener@gmail.com <b-icon class="ml-1" icon="envelope"></b-icon></p>
       </b-col>
     </b-row>
   </div>
@@ -90,7 +90,11 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.hello {
-  text-align: center;
+h5 {
+  color:  #f8f8f2;
+} 
+
+p, a {
+  color: #a6e22e;
 }
 </style>
