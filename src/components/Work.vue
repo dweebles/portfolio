@@ -98,6 +98,10 @@ export default {
   color: #a6e22e;
 }
 
+a:hover {
+  color: #ae81ff;
+}
+
 svg.chart {
   position: relative;
   bottom: 43px;

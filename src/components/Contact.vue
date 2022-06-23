@@ -31,8 +31,8 @@
               class="mt-2 contact-input"
             ></b-form-textarea>
             <div class="mt-2 ml-2 float-left">
-              <b-button type="reset" variant="danger" class="contact-reset mr-2">Reset</b-button>
               <b-button type="submit" variant="primary" class="contact-submit">Submit</b-button>
+              <b-button type="reset" variant="danger" class="contact-reset ml-2">Reset</b-button>
             </div>
         </b-form>
       </b-col>
@@ -81,6 +81,7 @@ export default {
     onReset(event) {
       event.preventDefault();
       // Reset our form values
+      this.form.name = "";
       this.form.email = "";
       this.form.stuff = "";
     }

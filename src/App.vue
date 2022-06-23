@@ -129,6 +129,20 @@ a.router-link-active {
   width: 18px;
   height: 18px;
   color: #a6e22e;
+  transition: width .3s, height .3s, color .3s;
+}
+
+.social-icons {
+  position:  relative;
+  top: -35px;
+  width: 18px;
+  height: 18px;
+  color: #a6e22e;
+  transition: color .3s ease;
+}
+
+.social-icons:hover {
+  color: #ae81ff;
 }
 
 @-webkit-keyframes typing {
